@@ -1,5 +1,5 @@
 import unittest
-from analyticsutils.analyticsutils.date.validate import validate
+from analyticsutils.date.validate import validate
 
 
 class TestValidate(unittest.TestCase):
