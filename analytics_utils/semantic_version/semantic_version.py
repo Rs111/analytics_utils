@@ -2,31 +2,30 @@ import re
 
 
 class SemanticVersion:
-    """Holds methods to parse a semantic app version in the form of 'Major.Minor.Patch'
+    """Holds methods to parse input semantic version in the form of 'Major.Minor.Patch'
 
+    All method return None if input is not a valid semantic version
+
+    A semantic version input is valid if:
+    It contains only number and periods
+    It is not an empty String
+    It does not start with a period
+    It does not end with a period
+    It has between 0 and two periods
+    It does not contain two periods in a row
     """
 
     def __init__(self, s):
-        """Initialize with a semantic app version String input"""
+        """Initialize with a semantic version String input"""
         self.s = s
 
     def clean(self):
-        """Clean semantic app version String according to the logic below
+        """Clean semantic version String according to the logic below
 
-        A semantic app version String is valid if:
-        It contains only number and periods
-        It is not an empty String
-        It does not start with a period
-        It does not end with a period
-        It has between 0 and two periods
-        It does not contain two periods in a row
-
-        Clean a valid semantic app version String using the logic below:
+        Clean and return a valid semantic version String using the logic below:
         If a valid semantic app version contains only the major, set the minor and patch to 0
         If a valid semantic app version contains only the major and minor, set the patch to 0
         If a valid semantic app version contains the major, minor, and patch, leave as is
-
-        If a semantic app version input is not valid, return None
 
         :return: cleaned semantic version String if input is valid, and None if input semantic version is invalid
         """
@@ -53,15 +52,16 @@ class SemanticVersion:
 
 
     def parse(self):
-        """Return """
+        """Return clean semantic version split out as a list of 3 Integer elements"""
         cleaned = self.clean()
         if cleaned is None:
             return None
         else:
-            return cleaned.split(".")
+            return [int(semantic_version_string) for semantic_version_string in cleaned.split(".")]
 
 
     def parse_semantic_version(self, i):
+        """Return the ith element from the semantic version list produced by parse"""
         parsed = self.parse()
         if parsed is None:
             return None
@@ -70,15 +70,15 @@ class SemanticVersion:
 
 
     def parse_major(self):
+        """Return the major of the semantic version as an Integer"""
         return self.parse_semantic_version(0)
 
 
     def parse_minor(self):
+        """Return the minor of the semantic version as an Integer"""
         return self.parse_semantic_version(1)
 
 
     def parse_patch(self):
+        """Return the patch of the semantic version as an Integer"""
         return self.parse_semantic_version(2)
-
-print(len("".split(".")))
-print(SemanticVersion("").parse())
