@@ -1,6 +1,5 @@
 import datetime as dt
 
-
 def validate(date, format):
     """Indicates whether date matches format
 
