@@ -17,6 +17,8 @@ class SemanticVersion:
 
     def __init__(self, s):
         """Initialize with a semantic version String input"""
+        if type(s) != str:
+            raise TypeError("input semantic version must be a String")
         self.s = s
 
     def clean(self):

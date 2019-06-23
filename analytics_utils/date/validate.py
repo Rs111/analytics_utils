@@ -10,5 +10,5 @@ def validate(date, date_format = "%Y-%m-%d"):
     try:
         parsed = dt.datetime.strptime(date, date_format).strftime(date_format)
         return date == parsed
-    except (ValueError, TypeError):
+    except ValueError:
         return False

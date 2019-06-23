@@ -3,6 +3,8 @@ from . import validate
 
 def date_range(date_start, date_end):
     """Return a sequential list of date strings of all dates between the input start and end parameters"""
+    if not type(date_start) == str or not type(date_end) == str:
+        raise TypeError("one of the input dates is not a string")
     if not validate(date_start) or not validate(date_end):
         raise ValueError("one of the input dates is not a valid '%Y-%m-%d' date String")
     elif date_start > date_end:
