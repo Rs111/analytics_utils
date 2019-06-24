@@ -23,7 +23,7 @@ Util functions and tooling.
 ```python
 from analytics_utils.date import date_range
 
-sequential_dates = date_range('2019-01-01', '2019-01-30')
+sequential_dates = date_range("2019-01-01", "2019-01-30")
 ```
 
 #### validate 

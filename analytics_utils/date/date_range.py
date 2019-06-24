@@ -1,12 +1,14 @@
 import datetime as dt
+from typing import List
 from . import validate
 
-def date_range(date_start, date_end):
-    """Return a sequential list of date strings of all dates between the input start and end parameters"""
+
+def date_range(date_start: str, date_end: str) -> List[str]:
+    """Return a sequential list of dates between `date_start` and `date_end`."""
     if not type(date_start) == str or not type(date_end) == str:
-        raise TypeError("one of the input dates is not a string")
+        raise TypeError("one of the input dates is not a `str`")
     if not validate(date_start) or not validate(date_end):
-        raise ValueError("one of the input dates is not a valid '%Y-%m-%d' date String")
+        raise ValueError("one of the input dates is not in the '%Y-%m-%d' format")
     elif date_start > date_end:
         raise ValueError("date_start is greater-than date_end")
     else:
