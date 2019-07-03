@@ -5,6 +5,7 @@ from . import validate
 
 def date_range(date_start: str, date_end: str) -> List[str]:
     """Return a sequential list of dates between `date_start` and `date_end`."""
+
     if not type(date_start) == str or not type(date_end) == str:
         raise TypeError("one of the input dates is not a `str`")
     if not validate(date_start) or not validate(date_end):

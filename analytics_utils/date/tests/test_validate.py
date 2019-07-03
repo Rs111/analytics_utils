@@ -4,7 +4,6 @@ from analytics_utils.date import validate
 
 class TestValidate(unittest.TestCase):
 
-    """ test version with only date parameter; overloaded function is bound to be correct """
     # should return true for a valid '%Y-%m-%d' format string
     def test_valid_standard_date(self):
         self.assertEqual(validate('2019-01-01', '%Y-%m-%d'), True)
@@ -44,9 +43,6 @@ class TestValidate(unittest.TestCase):
     # should return false when string contains a letter
     def test_letter_character(self):
         self.assertEqual(validate('2019-01a-01', '%Y-%m-%d'), False)
-
-    def test_non_string(self):
-        self.assertEqual(validate(date=5, date_format='%Y-%m-%d'), False)
 
 
 if __name__ == '__main__':
