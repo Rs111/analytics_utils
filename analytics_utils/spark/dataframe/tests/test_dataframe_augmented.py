@@ -2,6 +2,7 @@ import unittest
 from analytics_utils.spark import spark
 from analytics_utils.spark.dataframe import DataFrameAug
 from pyspark.sql import Row
+from pyspark.sql.functions import col
 from pyspark.sql.types import StructType, StructField, StringType, IntegerType
 
 schema = StructType([
@@ -28,24 +29,26 @@ df = DataFrameAug(spark.createDataFrame(l, schema))
 class TestMelt(unittest.TestCase):
 
     # should return expected when melt is done with one id_var and one value_var
-    def test_melt_one_id_one_value(self):
+    # def test_melt_one_id_one_value(self):
+    #
+    #     expected = [
+    #         Row(cat='A', name='Alice', value=5, variable='num'),
+    #         Row(cat='A', name='Alice', value=5, variable='num'),
+    #         Row(cat='B', name='Bob', value=9, variable='num'),
+    #         Row(cat='B', name='Tim', value=17, variable='num'),
+    #         Row(cat='B', name='Boris', value=2, variable='num'),
+    #         Row(cat='B', name='Sheldon', value=60, variable='num'),
+    #         Row(cat='C', name='Bobby', value=60, variable='num'),
+    #         Row(cat='C', name='Radu', value=121821, variable='num')]
+    #
+    #     self.assertEqual(df.melt(id_vars=["cat"], value_vars=["num"]).collect(), expected)
 
-        expected = [
-            Row(cat='A', name='Alice', variable='num', value=5),
-            Row(cat='A', name='Alice', variable='id', value=1),
-            Row(cat='A', name='Alice', variable='num', value=5),
-            Row(cat='A', name='Alice', variable='id', value=1),
-            Row(cat='B', name='Bob', variable='num', value=9),
-            Row(cat='B', name='Bob', variable='id', value=3),
-            Row(cat='B', name='Tim', variable='num', value=17),
-            Row(cat='B', name='Tim', variable='id', value=70),
-            Row(cat='B', name='Boris', variable='num', value=2),
-            Row(cat='B', name='Boris', variable='id', value=1),
-            Row(cat='B', name='Sheldon', variable='num', value=60),
-            Row(cat='B', name='Sheldon', variable='id', value=3),
-            Row(cat='C', name='Bobby', variable='num', value=60),
-            Row(cat='C', name='Bobby', variable='id', value=14),
-            Row(cat='C', name='Radu', variable='num', value=121821),
-            Row(cat='C', name='Radu', variable='id', value=182832)]
+    # should raise an assert when var_name is equal to an element in id_vars
+    def test_melt_assertion_raise_one(self):
+        with self.assertRaises(AssertionError):
+            df.melt(id_vars=["cat"], value_vars=["num"], var_name="num")
 
-        self.assertEqual(df.melt(id_vars=["cat"], value_vars=["num"]).collect(), expected)
+    # should raise an assert when var_name is equal to an element in value_vars
+    def test_melt_assertion_raise_two(self):
+        with self.assertRaises(AssertionError):
+            df.melt(id_vars=["cat"], value_vars=["num"], var_name="cat")

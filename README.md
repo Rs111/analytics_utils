@@ -1,7 +1,7 @@
 Analytics Utils
 ===================================================
 
-Util functions and tooling.
+Utility functions and tooling for Analytics.
 
 ## Installation
 **TBD**
@@ -10,15 +10,24 @@ Util functions and tooling.
 
 - [date](#date)
     - [date_range](#date_range)
+    - [date_range_with_weeks](#date_range_with_weeks)
+    - [add_days](#add_days)
+    - [minus_days](#minus_days)
+    - [add_weeks](#add_weeks)
+    - [minus_weeks](#minus_weeks)
     - [validate](#validate)
+    - [random_date](#random_date)
 - [semantic_version](#semantic_version)
     - [SemanticVersion](#SemanticVersion)
+- [DataFrameAug](#DataFrameAug)
+    - [melt](#melt)
     
 ### date 
+- All date functions have a `date_format` parameter that is set to `'%Y-%m-%d'` by default
 
 #### date_range
 - Returns a List of sequential dates between the input date_start and date_end
-- (date_start: String, date_end: String) => List[String]
+- (date_start: String, date_end: String, date_format: String) => List[String]
 
 ```python
 from analytics_utils.date import date_range
@@ -26,9 +35,31 @@ from analytics_utils.date import date_range
 sequential_dates = date_range("2019-01-01", "2019-01-30")
 ```
 
+#### date_range_with_weeks
+- Returns a List of Tuples with:
+    - The first element being sequential dates between the input date_start and date_end
+    - The second and third elements being the week start and end dates relative to the first element
+- (date_start: String, date_end: String, date_format: String) => List[Tuple[String, String, String]]
+
+```python
+from analytics_utils.date import date_range
+
+sequential_dates = date_range("2019-01-01", "2019-01-30")
+```
+
+#### random_date
+- Returns a random date between the input start and end dates (inclusive)
+- (date_start: String, date_end: String, date_format: String) => String
+
+```python
+from analytics_utils.date import random_date
+
+rand_date = random_date("2019-07-08", "2019-07-30")
+```
+
 #### validate 
 - Returns Boolean indicating whether input String is a valid date of the input format
-- (date_string: String, format: String) => Boolean
+- (date_string: String, date_format: String) => Boolean
 
 ```python
 from analytics_utils.date import validate
@@ -46,6 +77,7 @@ eg6 = validate("2019-3-01", "%Y-%m-%d")
 # default date_format is "%Y-%m-%d"
 eg7 = validate("2019-01-01")
 ```
+
 
 ### semantic_version
 
@@ -84,3 +116,40 @@ eg3_major_parsed = eg3.parse_major() # returns None
 eg3_minor_parsed = eg3.parse_minor() # returns None
 eg3_major_patch = eg3.parse_patch()  # returns None
 ```
+
+
+### DataFrameAug
+- Extends functionality of the pyspark `DataFrame`
+- Implemented as a subclass which calls the pyspark and adds methods (e.g. df.melt) 
+
+#### melt
+- Anti-pivots a dataset from wide-format to long-format
+- Same behaviour as the Pandas melt function: https://www.geeksforgeeks.org/python-pandas-melt/
+
+```python
+from analytics_utils.spark.dataframe import DataFrameAug
+from pyspark.sql.types import StructType, StructField, StringType, IntegerType
+
+schema = StructType([
+    StructField("cat", StringType()),
+    StructField("name", StringType()),
+    StructField("id", IntegerType()),
+    StructField("num", IntegerType())
+])
+
+l = [
+    ("A", 'Alice', 1, 5),
+    ("A", 'Alice', 1, 5),
+    ('B', 'Bob', 3, 9),
+    ('B', 'Tim', 70, 17),
+    ('B', 'Boris', 1, 2),
+    ('B', 'Sheldon', 3, 60),
+    ('C', 'Bobby', 14, 60),
+    ('C', 'Radu', 182832, 121821),
+]
+
+df = DataFrameAug(spark.createDataFrame(l, schema))
+
+df.melt(id_vars=["cat"], value_vars=["name"])
+```
+

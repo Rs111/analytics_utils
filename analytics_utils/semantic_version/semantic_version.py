@@ -21,8 +21,6 @@ class SemanticVersion:
 
     def __init__(self, s: str):
         """Initialize with `s`"""
-        if type(s) != str:
-            raise TypeError("input semantic version must be a `str`")
         self.s = s
 
     def __str__(self, clean: bool = True) -> Optional[str]:

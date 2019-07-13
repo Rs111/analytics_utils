@@ -25,24 +25,24 @@ class DataFrameAug(DataFrame):
         assert len(value_vars) > 0, "value_vars must not be an empty list"
         assert len(set(id_vars) & set(value_vars)) == 0, "there must be no intersection between id_vars and value_vars"
 
-        _d = dict(id_vars=id_vars, value_vars=value_vars)
+        d = dict(id_vars=id_vars, value_vars=value_vars)
 
-        for param in _d.keys():
+        for param in d.keys():
 
-            _invalid_elements = [i for i in _d[param] if i not in self.columns]
+            invalid_elements = [i for i in d[param] if i not in self.columns]
             assert \
-                len(_invalid_elements) == 0, \
-                "elements: `{1}` in param: `{0}` are not column names in `DataFrame`".format(param, ", ".join(_invalid_elements))
+                len(invalid_elements) == 0, \
+                "elements: `{1}` in param: `{0}` are not column names in `DataFrame`".format(param, ", ".join(invalid_elements))
 
         # Create array<struct<variable: str, value: ...>>
-        _vars_and_vals = array(*(
+        vars_and_vals = array(*(
             struct(lit(c).alias(var_name), col(c).alias(value_name))
             for c in value_vars))
 
         # Add to the DataFrame and explode
-        _tmp = self.withColumn("_vars_and_vals", explode(_vars_and_vals))
+        tmp = self.withColumn("vars_and_vals", explode(vars_and_vals))
 
         cols = [
             col(id_var).alias(id_var) for id_var in ["cat", "name"]] + [
-            col("_vars_and_vals")[x].alias(x) for x in [var_name, value_name]]
-        return _tmp.select(*cols)
+            col("vars_and_vals")[x].alias(x) for x in [var_name, value_name]]
+        return tmp.select(*cols)

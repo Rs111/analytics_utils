@@ -1,1 +1,1 @@
-from .dataframe_augmented import DataFrameAug
+from analytics_utils.spark.dataframe.dataframe_augmented import DataFrameAug

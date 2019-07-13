@@ -1,1 +1,1 @@
-from .semantic_version import SemanticVersion
+from analytics_utils.semantic_version.semantic_version import SemanticVersion

@@ -8,6 +8,7 @@ def validate(date: str, date_format: str = "%Y-%m-%d") -> bool:
     :param date_format: format against which to evaluate date (see: https://docs.python.org/3/library/datetime.html#strftime-strptime-behavior)
     :return: whether `date` is of `format`
     """
+
     try:
         parsed = dt.datetime.strptime(date, date_format).strftime(date_format)
         return date == parsed
