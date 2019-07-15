@@ -51,7 +51,6 @@ sequential_dates = date_range("2019-01-01", "2019-01-30")
 
 #### days
 - Functions which add/subtract `days` or `weeks` to `date`
-- (date: String, )
 
 ```python
 from analytics_utils.date.days import add_days, minus_days, add_weeks, minus_weeks
