@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30edfb3c-e853-4d04-9ce2-fac82061cf96" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/analytics_utils.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analytics_utils/date/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/analytics_utils/date/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analytics_utils/date/date_range.py" beforeDir="false" afterPath="$PROJECT_DIR$/analytics_utils/date/date_range.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analytics_utils/date/days.py" beforeDir="false" afterPath="$PROJECT_DIR$/analytics_utils/date/days.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analytics_utils/date/random_date.py" beforeDir="false" afterPath="$PROJECT_DIR$/analytics_utils/date/random_date.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analytics_utils/date/tests/test_validate.py" beforeDir="false" afterPath="$PROJECT_DIR$/analytics_utils/date/tests/test_validate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analytics_utils/date/validate.py" beforeDir="false" afterPath="$PROJECT_DIR$/analytics_utils/date/validate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analytics_utils/semantic_version/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/analytics_utils/semantic_version/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analytics_utils/semantic_version/semantic_version.py" beforeDir="false" afterPath="$PROJECT_DIR$/analytics_utils/semantic_version/semantic_version.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analytics_utils/spark/dataframe/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/analytics_utils/spark/dataframe/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/analytics_utils/spark/dataframe/dataframe_augmented.py" beforeDir="false" afterPath="$PROJECT_DIR$/analytics_utils/spark/dataframe/dataframe_augmented.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analytics_utils/spark/dataframe/tests/test_dataframe_augmented.py" beforeDir="false" afterPath="$PROJECT_DIR$/analytics_utils/spark/dataframe/tests/test_dataframe_augmented.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,22 +18,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/analytics_utils/semantic_version/semantic_version.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-781">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/analytics_utils/date/date_range.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="102">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -64,7 +45,7 @@
         <entry file="file://$PROJECT_DIR$/analytics_utils/date/validate.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -72,11 +53,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/analytics_utils/date/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-              <folding>
-                <element signature="e#71#121#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="17">
+              <caret line="1" column="82" lean-forward="true" selection-start-line="1" selection-end-line="1" selection-end-column="82" />
             </state>
           </provider>
         </entry>
@@ -84,8 +62,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/analytics_utils/date/random_date.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="108" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="108" />
+            <state relative-caret-position="102">
+              <caret line="8" column="108" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="108" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -96,11 +74,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/analytics_utils/spark/dataframe/dataframe_augmented.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="62" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="62" />
+            <state relative-caret-position="370">
+              <caret line="52" selection-start-line="52" selection-end-line="52" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/analytics_utils/spark/dataframe/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -113,8 +100,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/analytics_utils/spark/dataframe/tests/test_dataframe_augmented.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" selection-end-column="39" />
+            <state relative-caret-position="-140">
+              <caret line="25" column="51" lean-forward="true" selection-start-line="3" selection-end-line="25" selection-end-column="51" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -123,10 +113,9 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="172">
-                <caret line="144" column="25" lean-forward="true" selection-start-line="144" selection-start-column="25" selection-end-line="144" selection-end-column="25" />
+              <first_editor relative-caret-position="303">
+                <caret line="32" selection-start-line="32" selection-end-line="32" />
                 <folding>
-                  <element signature="e#0#56#0" expanded="true" />
                   <element signature="e#0#56#0" expanded="true" />
                 </folding>
               </first_editor>
@@ -182,21 +171,21 @@
         <option value="$PROJECT_DIR$/analytics_utils/date/validate.py" />
         <option value="$PROJECT_DIR$/analytics_utils/date/random_date.py" />
         <option value="$PROJECT_DIR$/analytics_utils/semantic_version/semantic_version.py" />
-        <option value="$PROJECT_DIR$/analytics_utils/spark/dataframe/dataframe_augmented.py" />
         <option value="$PROJECT_DIR$/analytics_utils/spark/dataframe/tests/test_dataframe_augmented.py" />
         <option value="$PROJECT_DIR$/analytics_utils/date/add_days.py" />
         <option value="$PROJECT_DIR$/analytics_utils/date/days.py" />
         <option value="$PROJECT_DIR$/analytics_utils/date/__init__.py" />
         <option value="$PROJECT_DIR$/analytics_utils/date/date_range.py" />
+        <option value="$PROJECT_DIR$/analytics_utils/spark/dataframe/dataframe_augmented.py" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-6" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
     <option name="y" value="1080" />
-    <option name="width" value="1934" />
-    <option name="height" value="1087" />
+    <option name="width" value="1953" />
+    <option name="height" value="1298" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -208,49 +197,36 @@
         <subPane>
           <expand>
             <path>
-              <item name="test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="analytics_utils" type="b2602c69:ProjectViewProjectNode" />
               <item name="analytics_utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="analytics_utils" type="b2602c69:ProjectViewProjectNode" />
               <item name="analytics_utils" type="462c0819:PsiDirectoryNode" />
-              <item name="date" type="462c0819:PsiDirectoryNode" />
+              <item name="analytics_utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="analytics_utils" type="b2602c69:ProjectViewProjectNode" />
+              <item name="analytics_utils" type="462c0819:PsiDirectoryNode" />
               <item name="analytics_utils" type="462c0819:PsiDirectoryNode" />
               <item name="date" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="analytics_utils" type="b2602c69:ProjectViewProjectNode" />
               <item name="analytics_utils" type="462c0819:PsiDirectoryNode" />
-              <item name="semantic_version" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="analytics_utils" type="462c0819:PsiDirectoryNode" />
               <item name="spark" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="analytics_utils" type="b2602c69:ProjectViewProjectNode" />
+              <item name="analytics_utils" type="462c0819:PsiDirectoryNode" />
               <item name="analytics_utils" type="462c0819:PsiDirectoryNode" />
               <item name="spark" type="462c0819:PsiDirectoryNode" />
               <item name="dataframe" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="analytics_utils" type="b2602c69:ProjectViewProjectNode" />
+              <item name="analytics_utils" type="462c0819:PsiDirectoryNode" />
               <item name="analytics_utils" type="462c0819:PsiDirectoryNode" />
               <item name="spark" type="462c0819:PsiDirectoryNode" />
               <item name="dataframe" type="462c0819:PsiDirectoryNode" />
@@ -265,7 +241,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="C:/Spark" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -285,9 +261,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.semantic_version">
+  <component name="RunManager" selected="Python.dataframe_augmented">
     <configuration name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="test" />
+      <module name="analytics_utils" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -308,7 +284,7 @@
       <method v="2" />
     </configuration>
     <configuration name="dataframe_augmented" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="test" />
+      <module name="analytics_utils" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -329,7 +305,7 @@
       <method v="2" />
     </configuration>
     <configuration name="semantic_version" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="test" />
+      <module name="analytics_utils" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -350,7 +326,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unittests in test_dataframe_augmented.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="test" />
+      <module name="analytics_utils" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
@@ -364,7 +340,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unittests in test_validate.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="test" />
+      <module name="analytics_utils" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
@@ -379,11 +355,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.dataframe_augmented" />
         <item itemvalue="Python.semantic_version" />
         <item itemvalue="Python tests.Unittests in test_dataframe_augmented.py" />
         <item itemvalue="Python tests.Unittests in test_validate.py" />
         <item itemvalue="Python.__init__" />
-        <item itemvalue="Python.dataframe_augmented" />
       </list>
     </recent_temporary>
   </component>
@@ -433,14 +409,15 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="1080" width="1547" height="869" extended-state="0" />
+    <frame x="-20" y="1073" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23707186" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24329759" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.28861788" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.28854313" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.398374" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -500,13 +477,6 @@
     <entry file="file://$PROJECT_DIR$/analytics_utils/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/analytics_utils/spark/dataframe/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/analytics_utils/date/tests/test_validate.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="347">
@@ -519,40 +489,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/analytics_utils/semantic_version/semantic_version.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-781">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="391">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/analytics_utils/date/validate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/analytics_utils/date/random_date.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="108" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="108" />
+        <state relative-caret-position="102">
+          <caret line="8" column="108" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="108" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/analytics_utils/date/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#71#121#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/analytics_utils/spark/dataframe/tests/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/analytics_utils/date/date_range.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="102">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/analytics_utils/spark/dataframe/tests/test_dataframe_augmented.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-140">
+          <caret line="25" column="51" lean-forward="true" selection-start-line="3" selection-end-line="25" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -567,40 +547,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/analytics_utils/date/validate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/analytics_utils/spark/dataframe/tests/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/analytics_utils/spark/dataframe/tests/test_dataframe_augmented.py">
+    <entry file="file://$PROJECT_DIR$/analytics_utils/date/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" selection-end-column="39" />
+          <caret line="1" column="82" lean-forward="true" selection-start-line="1" selection-end-line="1" selection-end-column="82" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/analytics_utils/spark/dataframe/dataframe_augmented.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="62" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="62" />
+        <state relative-caret-position="370">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/analytics_utils/spark/dataframe/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="172">
-            <caret line="144" column="25" lean-forward="true" selection-start-line="144" selection-start-column="25" selection-end-line="144" selection-end-column="25" />
+          <first_editor relative-caret-position="303">
+            <caret line="32" selection-start-line="32" selection-end-line="32" />
             <folding>
-              <element signature="e#0#56#0" expanded="true" />
               <element signature="e#0#56#0" expanded="true" />
             </folding>
           </first_editor>

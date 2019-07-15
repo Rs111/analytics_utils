@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Callable, Any
 from pyspark.sql import DataFrame
 from pyspark.sql.functions import col, array, struct, lit, explode
 
@@ -10,11 +10,11 @@ class DataFrameAug(DataFrame):
         super().__init__(df._jdf, df.sql_ctx)
 
     def melt(
-            self: DataFrame,
-            id_vars: List[str],
-            value_vars: List[str],
-            var_name: str = "variable",
-            value_name: str = "value") -> DataFrame:
+        self: DataFrame,
+        id_vars: List[str],
+        value_vars: List[str],
+        var_name: str = "variable",
+        value_name: str = "value") -> DataFrame:
         """Converts `DataFrame` from wide to long format."""
 
         # Assertions
@@ -46,3 +46,7 @@ class DataFrameAug(DataFrame):
             col(id_var).alias(id_var) for id_var in ["cat", "name"]] + [
             col("vars_and_vals")[x].alias(x) for x in [var_name, value_name]]
         return tmp.select(*cols)
+
+    def with_df_transformed(self: DataFrame, f: Callable) -> Any:
+        """Apply a function to `DataFrame`"""
+        return f(self)

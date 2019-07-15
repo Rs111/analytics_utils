@@ -4,23 +4,21 @@ Analytics Utils
 Utility functions and tooling for Analytics.
 
 ## Installation
-**TBD**
+**Clone Repo and Use**
 
 ## Usage
 
 - [date](#date)
     - [date_range](#date_range)
     - [date_range_with_weeks](#date_range_with_weeks)
-    - [add_days](#add_days)
-    - [minus_days](#minus_days)
-    - [add_weeks](#add_weeks)
-    - [minus_weeks](#minus_weeks)
+    - [days](#days)
     - [validate](#validate)
     - [random_date](#random_date)
 - [semantic_version](#semantic_version)
     - [SemanticVersion](#SemanticVersion)
 - [DataFrameAug](#DataFrameAug)
     - [melt](#melt)
+    - [with_df_transformed](#with_df_transformed)
     
 ### date 
 - All date functions have a `date_format` parameter that is set to `'%Y-%m-%d'` by default
@@ -32,7 +30,9 @@ Utility functions and tooling for Analytics.
 ```python
 from analytics_utils.date import date_range
 
+
 sequential_dates = date_range("2019-01-01", "2019-01-30")
+
 ```
 
 #### date_range_with_weeks
@@ -44,7 +44,24 @@ sequential_dates = date_range("2019-01-01", "2019-01-30")
 ```python
 from analytics_utils.date import date_range
 
+
 sequential_dates = date_range("2019-01-01", "2019-01-30")
+
+```
+
+#### days
+- Functions which add/subtract `days` or `weeks` to `date`
+- (date: String, )
+
+```python
+from analytics_utils.date.days import add_days, minus_days, add_weeks, minus_weeks
+
+
+dt_plus_7_days = add_days("2019-01-01", 7)
+dt_minus_7_days = minus_days("2019-01-01", 7)
+dt_plus_1_week = add_weeks("2019-01-01", 1)
+dt_minus_1_week = minus_weeks("2019-01-01", 1)
+
 ```
 
 #### random_date
@@ -54,7 +71,9 @@ sequential_dates = date_range("2019-01-01", "2019-01-30")
 ```python
 from analytics_utils.date import random_date
 
+
 rand_date = random_date("2019-07-08", "2019-07-30")
+
 ```
 
 #### validate 
@@ -63,6 +82,7 @@ rand_date = random_date("2019-07-08", "2019-07-30")
 
 ```python
 from analytics_utils.date import validate
+
 
 # return true
 eg1 = validate(date="2019-01-01", date_format="%Y-%m-%d")
@@ -76,6 +96,7 @@ eg6 = validate("2019-3-01", "%Y-%m-%d")
 
 # default date_format is "%Y-%m-%d"
 eg7 = validate("2019-01-01")
+
 ```
 
 
@@ -91,6 +112,7 @@ eg7 = validate("2019-01-01")
 
 ```python
 from analytics_utils.semantic_version import SemanticVersion
+
 
 # case one: input is valid and complete 
 eg1 = SemanticVersion("6.3.12")
@@ -115,6 +137,7 @@ eg3_parsed = eg3.parse()             # returns None
 eg3_major_parsed = eg3.parse_major() # returns None
 eg3_minor_parsed = eg3.parse_minor() # returns None
 eg3_major_patch = eg3.parse_patch()  # returns None
+
 ```
 
 
@@ -129,6 +152,7 @@ eg3_major_patch = eg3.parse_patch()  # returns None
 ```python
 from analytics_utils.spark.dataframe import DataFrameAug
 from pyspark.sql.types import StructType, StructField, StringType, IntegerType
+
 
 schema = StructType([
     StructField("cat", StringType()),
@@ -151,5 +175,19 @@ l = [
 df = DataFrameAug(spark.createDataFrame(l, schema))
 
 df.melt(id_vars=["cat"], value_vars=["name"])
+
 ```
 
+#### with_df_transformed
+- Apply a `DataFrame => Any` function to a pyspark `DataFrame` instance
+
+```python
+from analytics_utils.spark.dataframe import DataFrameAug
+
+
+condition = True
+f = lambda df: df.withColumn("conditional_col", lit(1)) if condition else df
+
+df.with_df_transformed(f)
+
+```
